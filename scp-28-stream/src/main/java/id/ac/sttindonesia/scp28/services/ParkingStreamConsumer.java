@@ -48,7 +48,7 @@ public class ParkingStreamConsumer
         for (ConsumerRecord<String, String> record : records)
         {
           System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
-          postSensor(record.value());
+//          postSensor(record.value());
         }
       }
       else        
@@ -59,10 +59,10 @@ public class ParkingStreamConsumer
       if (empty_time > 60000)
       {
         //ini problem bagaimana mencari sensor_id yang kosong
-        this.postSensor("{\"sensorId\":\"1\",\"data\":{\"status\":\"-1\"}}");
-        this.postSensor("{\"sensorId\":\"2\",\"data\":{\"status\":\"-1\"}}");
-        this.postSensor("{\"sensorId\":\"3\",\"data\":{\"status\":\"-1\"}}");
-        this.postSensor("{\"sensorId\":\"4\",\"data\":{\"status\":\"-1\"}}");
+        this.postSensor("{\"sensorId\":\"1\",\"data\":{\"status\":\"0\"}}");
+        this.postSensor("{\"sensorId\":\"2\",\"data\":{\"status\":\"0\"}}");
+        this.postSensor("{\"sensorId\":\"3\",\"data\":{\"status\":\"0\"}}");
+        this.postSensor("{\"sensorId\":\"4\",\"data\":{\"status\":\"0\"}}");
 
         empty_time = 0;
       }      
