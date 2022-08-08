@@ -3,6 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+/scp-28-boot/src/main/resources/application.yml
 
 ### STS ###
 .apt_generated
