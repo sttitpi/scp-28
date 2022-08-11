@@ -1,4 +1,4 @@
-package com.yacanet.kafkaboot;
+package ac.id.sttindonesia.scp28boot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

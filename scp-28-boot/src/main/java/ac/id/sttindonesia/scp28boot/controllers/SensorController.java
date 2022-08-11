@@ -29,26 +29,26 @@ public class SensorController {
   @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
   public String index()
   {        
-      return "akan mengirim ke kafka producer";
+    return "akan mengirim ke kafka producer";
   }
   @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<PayloadResponse> store(@RequestBody SensorRequestModel sensor)
   { 
-      KafkaProducer<String, String> producer = new KafkaProducer<>(configKafka.getPropProducers());
-      
-      String data_sensor = "{"
-        + "\"sensorId\":\"" + sensor.getSensorId() + "\","
-        + "\"data\":" + sensor.getData()
-        + "}";
-      ProducerRecord<String, String> record = new ProducerRecord<>("sensor-" + sensor.getSensorId(), data_sensor);
-      producer.send(record);
+    KafkaProducer<String, String> producer = new KafkaProducer<>(configKafka.getPropProducers());
 
-      PayloadResponse response = new PayloadResponse();
-      response.setStatus("000");
-      response.setMessage("DATA SENSOR DARI SLOT-" + sensor.getSensorId() + " BERHASIL DISIMPAN.");
-      response.setData(data_sensor);
-      
-      producer.close();
-      return new ResponseEntity<>(response, HttpStatus.OK);
+    String data_sensor = "{"
+      + "\"sensorId\":\"" + sensor.getSensorId() + "\","
+      + "\"data\":" + sensor.getData()
+      + "}";
+    ProducerRecord<String, String> record = new ProducerRecord<>("sensor-" + sensor.getSensorId(), data_sensor);
+    producer.send(record);
+
+    PayloadResponse response = new PayloadResponse();
+    response.setStatus("000");
+    response.setMessage("DATA SENSOR DARI SLOT-" + sensor.getSensorId() + " BERHASIL DISIMPAN.");
+    response.setData(data_sensor);
+
+    producer.close();
+    return new ResponseEntity<>(response, HttpStatus.OK);
   }
 }

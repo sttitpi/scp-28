@@ -1,28 +1,28 @@
 package ac.id.sttindonesia.scp28boot.models.sensor;
 
 public class SensorRequestModel {
-    /**
-     * sensor id
-     */
-    private String sensorId;
-    /**
-     * isi data dari sensor
-     */
-    private String data;
+  /**
+   * sensor id
+   */
+  private String sensorId;
+  /**
+   * isi data dari sensor
+   */
+  private String data;
 
-    public String getSensorId() {
-        return sensorId;
-    }
+  public String getSensorId() {
+    return sensorId;
+  }
 
-    public void setSensorId(String id) {
-        this.sensorId = id;
-    }
+  public void setSensorId(String id) {
+    this.sensorId = id;
+  }
 
-    public String getData() {
-        return data;
-    }
+  public String getData() {
+    return data;
+  }
 
-    public void setData(String data) {
-        this.data = data;
-    }
+  public void setData(String data) {
+    this.data = data;
+  }
 }

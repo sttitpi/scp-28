@@ -1,4 +1,4 @@
-package id.ac.sttindonesia.smartparkingstream;
+package id.ac.sttindonesia.scp28;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,11 +1,11 @@
-name: smartparkingstream
+name: "scp-28-stream"
 spring:
   main:
     web-application-type: none
 carparking:
   api-url-v1: https://carparking.sttindonesia.ac.id/api/v1
 kafka:
-  bootstrap=servers: cluster.yacanet.com:9092
+  bootstrap-servers: "scp-28-boot.sttindonesia.ac.id:9092"
   consumer:
-    group-id: smartparkingstream
+    group-id: "scp-28"
     auto-offset-reset: latest
