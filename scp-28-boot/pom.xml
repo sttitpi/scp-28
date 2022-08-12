@@ -10,7 +10,7 @@
     </parent>
     <groupId>id.ac.sttindonesia</groupId>
     <artifactId>scp-28-boot</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>scp-28-boot</name>
     <description>an inteface web service for kafka cluster</description>
     <properties>

@@ -10,7 +10,7 @@
   </parent>
   <groupId>ac.id.sttindonesia</groupId>
   <artifactId>scp-28-stream</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>scp-28-stream</name>
   <description>an event streaming processing</description>
   <properties>
